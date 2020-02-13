@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wapy Agência Digital em Sâo Paulo - Atendemos Todo Brasil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="Description" content="Criamos sites, artes para mídias sociais e físicas, logotipos e flyers animados">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wapy Agência Digital em Sâo Paulo - Atendemos Todo Brasil">
+  <meta property="og:description" content="Criamos sites, artes para mídias sociais e físicas, logotipos e flyers animados">
+  <meta property="og:url" content="https://wapy.com.br/">
+  <meta property="og:image" content="https://wapy.com.br/og-image.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shorcut icon" href="favicon.png">
+  <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="wrapper">
+    
+    <header class="cabecalho">
+      <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
+      <nav class="menu">
+        <a href="#contato">Contato</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </header>
+
+    <div class="promo">
+      <h2>Aproveite nossas promoções. Entre em contato conosco.</h2>
+      <div class="promo-1">
+        <h3>Site Profissional</h3>
+        <p>Até 5 páginas</p>
+        <p><span class="preco">R$ 498,90</span></p>
+      </div>
+      <div class="promo-2">
+        <h3>Logotipo ou Post</h3>
+        <p>Post para redes sociais</p>
+        <p><span class="preco">48,90</span></p>
+      </div>
+      <div class="promo-3">
+        <h3>Post Animado</h3>
+        <p>Até 15 segundos</p>
+        <p><span class="preco">99,90</span></p>
+      </div>
+      <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou depósito bancário</p>
+    </div>
+    <div class="contato" id="contato">
+      <form action="" class="form-contato" ethod>
+        <h3 class="sub">Envie uma <span>mensagem</span> para nós</h3>
+        <label for="cnome" class="nome">
+          <p>Nome:</p>
+          <input type="text" id="cnome" placeholder="Digite o seu nome" required>
+        </label>
+        <label for="ctelefone" class="telefone">
+          <p>Telefone:</p>
+          <input type="text" id="cddd" maxlength="3" placeholder="DDD" required>
+          <input type="text" id="ctelefone" placeholder="Número do seu telefone" required>
+        </label>
+        <label for="cemail" class="email">
+          <p>Email:</p>
+          <input type="email" id="cemail" placeholder="Digite o seu email" required>
+        </label>
+        <label for="cmsg" class="mensagem">
+          <p>Mensagem:</p>
+          <textarea name="cmsg" id="cmsg" cols="30" rows="10" placeholder="Digite a sua mensagem" required></textarea>
+        </label>
+        <button type="send" class="button"><img src="img/icon-send.svg" class="icon">Enviar</button>
+      </form>
+      <div class="dados-contato">
+        <h3 class="sub">Entre em <span>contato conosco</span> diretamente</h3>
+        <ul>
+          <li><img src="img/icon-whatsapp.svg" alt="ìcone whatsapp" class="icon whats">
+            <a href="https://wa.me/5511993438640" class="button green"  target="_blank">Chamar agora</a>
+          </li>
+          <li><img src="img/icon-tel.svg" alt="Ícone Telefone Contato" class="icon">
+            <a href="tel:5511993438640">(11) 99343-8640</a>
+          </li>
+          <li><img src="img/icon-mail.svg" alt="Ícone Email contato" class="icon">
+            <a href="mailto:contato@wapy.com.br">contato@wapy.com.br</a>
+          </li>
+        </ul>
+      </div>
+      <div class="sobre" id="sobre">
+        <h3 class="sub">Sobre a <span>wapy</span></h3>
+        <p>Agência Digital <strong>especializada</strong> em criação de sites e conteúdo digital.</p>
+        <p>Atendimento <strong>online</strong>: Segunda à Sexta, das <strong>8:30</strong> às <strong>19:00hrs</strong></p>
+        <p>Endereço: Rua Osaka, 1204 - São Paulo - SP - CNPJ: 33.200.328/0001-00</p>
+      </div>
+    </div>
+    <footer class="rodape">
+      <p>
+        <a href="https://fb.com/wapy"><img src="" alt=""></a>
+        <a href="https://instagram.com/wapy"><img src="" alt=""></a>
+      </p>
+      <p>Copyright &copy; 2020 <img src="img/symbol.svg" alt="Símbolo"></p>      
+    </footer>
+    <script src="js/easeljs-0.7.1.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
