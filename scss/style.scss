@@ -4,6 +4,10 @@
   box-sizing: border-box;
   line-height: 1.4;
 }
+img {
+  display: inline-block;
+  max-width: 100%;
+}
 
 // Cores
 $l1: #381155;
@@ -29,6 +33,10 @@ ul {
 a {
   color: $c4;
   text-decoration: none;
+}
+
+p {
+  font-size: 16px;
 }
 
 #bg-canvas {
@@ -66,7 +74,8 @@ body {
       margin-right: 16px;
       text-transform: uppercase;
       letter-spacing: .05em;
-      font-weight: normal;
+      font-weight: bold;
+      font-size: 1rem;
       &::after {
         content: '';
         width: 0;
@@ -79,6 +88,12 @@ body {
       }
       &:hover::after {
         width: 100%;
+      }
+      &:first-child {
+        color: $a3;
+      }
+      &:first-child::after {
+        background-color: $a3;
       }
     }
   }
@@ -125,8 +140,8 @@ label p{
     vertical-align: center;
     letter-spacing: 0.03rem;
     margin: 16px;
-    transition: 1s;
     transform: scale(1);
+    transition: .3s;
     box-shadow: 2px 2px 8px rgba(0,0,0,.4);
     line-height: 1;
     user-select: none;
@@ -150,7 +165,13 @@ label p{
     }
   }
   div:nth-child(odd) {
-    background: $a3;
+    background: $a4;
+    h3 {
+      color: $a3
+    }
+    p {
+      color: $l2
+    }
     .preco {
       color: $l2;
       font-weight: 700;
@@ -168,10 +189,15 @@ label p{
   }
   > p:last-child {
     flex-shrink: 0;
-    flex-basis: 500px;
+    flex-basis: 100%;
     text-align: center;
-    vertical-align: center;
-    margin: 16px 0 26px;
+    margin: 16px auto 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > * {
+      margin: 0 3px;
+    }
   }
 }
 .sub {
@@ -247,13 +273,55 @@ label p{
       margin: 16px 0;
     }
   }
-  .sobre {
-    p {
-      // text-indent: 16px;
-      margin-bottom: 16px;
+  .social {
+    a {
+      display: inline-block;
+      height: 40px;
+      margin: -5px 10px 0 0;
+    }
+    img {
+      max-height: 100%;
+      fill: $a3;
+        color: $a3;
+        stroke: $a3;
+        svg {
+          fill: $a3;
+        color: $a3;
+        stroke: $a3;
+        }
+      &:hover {
+        fill: $a3;
+        color: $a3;
+        stroke: $a3;
+      }
     }
   }
 }
+.logo {
+  max-width: 130px;
+}
+.footer {
+  text-align: center;
+  .logo {
+    height: 60px;
+    width: 100%;
+  }
+  .logo ~ i {
+    &::after {
+      content: "wapy";
+      font-family: 'Nunito';
+      font-size: 16px;
+      font-weight: 900;
+      display: block;
+      color: $a3;
+      margin-bottom: 16px;
+    }
+  }
+  span {
+    color: $a3;
+  }
+}
+
 @keyframes bounce-in {
   from {
     transform: scale(1) rotate(0);
@@ -298,7 +366,31 @@ label p{
 
 @media (max-width: 959px) {
   .wrapper {
-    max-width: 97vw;
+    max-width: 100vw;
+    margin: 0;
+  }
+  .contato {
+    max-height: 100%;
+    .dados-contato {
+      order:-2;
+    }
+  }
+  .promo {
+    > div {
+      &:hover {
+        animation: none;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .button {
+    animation: none;
+  }
+}
+@media (max-width: 720px) {
+  .wrapper {
+    max-width: 100vw;
+    margin: 0;
   }
   .contato {
     max-height: 100%;
