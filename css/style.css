@@ -1,17 +1,292 @@
-/* Error: expected "}".
- *     ,
- * 308 | }
- *     |  ^
- *     '
- *   scss\style.scss 308:2  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 308 \2502  }\a     \2502   ^\a     \2575 \a   scss\\style.scss 308:2  root stylesheet';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #E6E3E8;
+  text-decoration: none;
+}
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 940px;
+  padding: 30px 80px;
+  background: rgba(10, 10, 10, 0.4);
+  margin: 10px auto 30px;
+  border-radius: 1.25rem;
+}
+
+body {
+  background: #381155;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #E6E3E8;
+  font-size: 1rem;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cabecalho .menu a {
+  display: inline-block;
+  margin-right: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+}
+.cabecalho .menu a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #E6E3E8;
+  margin: 8px auto;
+  border-radius: 3px;
+  display: block;
+  transition: 0.3s ease-in;
+}
+.cabecalho .menu a:hover::after {
+  width: 100%;
+}
+
+input, textarea {
+  background: none;
+  border: 0.25rem solid #E6E3E8;
+  border-radius: 0.1875rem;
+  color: #E6E3E8;
+  padding: 5px 10px;
+  font-family: arial;
+  font-size: 16px;
+  width: 380px;
+}
+
+input {
+  height: 36px;
+}
+
+textarea {
+  height: 96px;
+  resize: none;
+}
+
+label p {
+  color: #E6E3E8;
+  margin: 1rem 0 0.625rem;
+}
+
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.promo h2 {
+  color: #FF7F66;
+  text-align: center;
+  margin-bottom: 26px;
+}
+.promo > div {
+  width: 210px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-align: center;
+  vertical-align: center;
+  letter-spacing: 0.03rem;
+  margin: 16px;
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  line-height: 1;
+  user-select: none;
+  cursor: pointer;
+}
+.promo > div:hover {
+  transform: scale(1.3);
+  animation-name: bounce-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.promo > div h3 {
+  width: 180px;
+}
+.promo div:nth-child(even) {
+  background: #662D91;
+}
+.promo div:nth-child(even) .preco {
+  color: #FF7F66;
+  font-weight: 700;
+}
+.promo div:nth-child(odd) {
+  background: #FF7F66;
+}
+.promo div:nth-child(odd) .preco {
+  color: #662D91;
+  font-weight: 700;
+}
+.promo h3 {
+  font-size: 20px;
+  font-family: "Nunito";
+  font-weight: 900;
+  line-height: 1.2;
+}
+.promo .preco {
+  font-size: 26px;
+  font-weight: bolder;
+}
+.promo > p:last-child {
+  flex-shrink: 0;
+  flex-basis: 500px;
+  text-align: center;
+  vertical-align: center;
+  margin: 16px 0 26px;
+}
+
+.sub {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.sub::before {
+  content: "";
+  width: 5px;
+  border-radius: 5px;
+  height: 16px;
+  line-height: 0.5;
+  background: #FF7F66;
+  margin-right: 10px;
+  display: block;
+}
+.sub span {
+  color: #FF7F66;
+  margin: 0 4px;
+}
+
+.button {
+  padding: 10px;
+  background: #FF7F66;
+  color: #E6E3E8;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+.button:hover {
+  animation: button 0.7s linear;
+}
+
+.button[type=send] {
+  margin: 26px 0;
+}
+
+.green {
+  display: inline-block;
+  background: #00AD6F;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 600px;
+}
+.contato > * {
+  margin: 0 26px 26px;
+  max-width: 380px;
+}
+.contato #cddd {
+  margin-right: 10px;
+  max-width: 75px;
+  display: inline-block;
+}
+.contato #ctelefone {
+  max-width: 290px;
+}
+.contato form {
+  max-height: 100%;
+}
+.contato .dados-contato li {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+.contato .sobre p {
+  margin-bottom: 16px;
+}
+
+@keyframes bounce-in {
+  from {
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  85% {
+    transform: scale(1.25) rotate(5deg);
+  }
+  93% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  to {
+    transform: scale(1.2) rotate(0);
+  }
+}
+@keyframes button {
+  from {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  85% {
+    transform: scale(1.1);
+  }
+  93% {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (max-width: 959px) {
+  .wrapper {
+    max-width: 97vw;
+  }
+
+  .contato {
+    max-height: 100%;
+  }
+  .contato .dados-contato {
+    order: -2;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
