@@ -2,9 +2,22 @@
 <html lang="pt-br">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158392127-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158392127-1');
+  </script>
+
   <meta charset="UTF-8">
   <title>Wapy Agência Digital em Sâo Paulo - Atendemos Todo Brasil</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="Description" content="Criamos sites, artes para mídias sociais e físicas, logotipos e flyers animados">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Wapy Agência Digital em Sâo Paulo - Atendemos Todo Brasil">
@@ -19,7 +32,7 @@
 <body>
   <canvas id="bg-canvas"></canvas>
   <div class="wrapper">
-    
+
     <header class="cabecalho">
       <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
       <nav class="menu">
@@ -45,7 +58,7 @@
         <p>Até 15 segundos</p>
         <p><span class="preco">99,90</span></p>
       </div>
-      <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou depósito bancário</p>
+      <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou <strong>depósito bancário</strong></p>
     </div>
     <div class="contato" id="contato">
       <form action="" class="form-contato" ethod>
@@ -73,7 +86,7 @@
         <h3 class="sub">Entre em <span>contato conosco</span> diretamente</h3>
         <ul>
           <li><img src="img/icon-whatsapp.svg" alt="ìcone whatsapp" class="icon whats">
-            <a href="https://wa.me/5511993438640" class="button green"  target="_blank">Chamar agora</a>
+            <a href="https://wa.me/5511993438640" class="button green" target="_blank">Chamar agora</a>
           </li>
           <li><img src="img/icon-tel.svg" alt="Ícone Telefone Contato" class="icon">
             <a href="tel:5511993438640">(11) 99343-8640</a>
@@ -89,13 +102,21 @@
         <p>Atendimento <strong>online</strong>: Segunda à Sexta, das <strong>8:30</strong> às <strong>19:00hrs</strong></p>
         <p>Endereço: Rua Osaka, 1204 - São Paulo - SP - CNPJ: 33.200.328/0001-00</p>
       </div>
+      <div class="social">
+        <h3 class="sub">Redes Sociais</h3>
+        <a href="https://fb.com/wapy">
+          <img src="img/icon-facebook.svg" alt="Facebook Wapy" target="_blank">
+        </a>
+        <a href="https://instagram.com/wapy">
+          <img src="img/icon-instagram.svg" alt="Instagram Wapy" target="_blank">
+        </a>
+      </div>
     </div>
-    <footer class="rodape">
-      <p>
-        <a href="https://fb.com/wapy"><img src="" alt=""></a>
-        <a href="https://instagram.com/wapy"><img src="" alt=""></a>
-      </p>
-      <p>Copyright &copy; 2020 <img src="img/symbol.svg" alt="Símbolo"></p>      
+    <footer class="footer">
+      
+      <p><img src="img/symbol.svg" alt="Símbolo" class="logo"><i></i></p>
+
+      <p>Copyright &copy; 2020 - Todos os direitos reservados</p>
     </footer>
     <script src="js/easeljs-0.7.1.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
