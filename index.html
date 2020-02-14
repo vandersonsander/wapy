@@ -27,69 +27,68 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shorcut icon" href="favicon.png">
   <link rel="icon" href="favicon.png">
+  <link rel="canonical" href="https://wapy.com.br/">
 </head>
 
-<body>
+<body  itemscope itemtype="http://schema.org/WebPage">
   <canvas id="bg-canvas"></canvas>
   <div class="wrapper">
 
     <header class="cabecalho">
       <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
       <nav class="menu">
-        <a href="#contato">Contato</a>
         <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
       </nav>
     </header>
 
-    <div class="promo">
+    <div class="promo" itemscope itemtype="https://schema.org/CreativeWork">
       <h2>Aproveite nossas promoções. Entre em contato conosco.</h2>
-      <div class="promo-1">
-        <h3>Site Profissional</h3>
+      <div class="promo-1" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <h3 itemprop="name">Site Profissional</h3>
         <p>Até 5 páginas</p>
-        <p><span class="preco">R$ 498,90</span></p>
+        <p itempro=""><span class="preco" itemprop="price">R$ 498,90</span></p>
       </div>
-      <div class="promo-2">
-        <h3>Logotipo ou Post</h3>
+      <div class="promo-2" itemprop="offers">
+        <h3 itemprop="name">Logotipo ou Post</h3>
         <p>Post para redes sociais</p>
-        <p><span class="preco">48,90</span></p>
+        <p><span class="preco" itemprop="price">R$ 48,90</span></p>
       </div>
-      <div class="promo-3">
-        <h3>Post Animado</h3>
+      <div class="promo-3" itemprop="offers">
+        <h3 itemprop="name">Post Animado</h3>
         <p>Até 15 segundos</p>
-        <p><span class="preco">99,90</span></p>
+        <p><span class="preco" itemprop="price">R$ 99,90</span></p>
       </div>
       <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou <strong>depósito bancário</strong></p>
     </div>
     <div class="contato" id="contato">
-      <form action="" class="form-contato" ethod>
+      <form action="enviar.php" class="form-contato" method="POST">
         <h3 class="sub">Envie uma <span>mensagem</span> para nós</h3>
-        <label for="cnome" class="nome">
-          <p>Nome:</p>
-          <input type="text" id="cnome" placeholder="Digite o seu nome" required>
+        <label for="nome" class="nome">Nome:
+          <input type="text" id="nome" placeholder="Digite o seu nome" name="nome" required>
         </label>
-        <label for="ctelefone" class="telefone">
-          <p>Telefone:</p>
-          <input type="text" id="cddd" maxlength="3" placeholder="DDD" required>
-          <input type="text" id="ctelefone" placeholder="Número do seu telefone" required>
+        <label for="ddd" class="telefone">Telefone:
+          <input type="text" id="ddd" maxlength="3" placeholder="DDD" name="ddd" required>
         </label>
-        <label for="cemail" class="email">
-          <p>Email:</p>
-          <input type="email" id="cemail" placeholder="Digite o seu email" required>
+        <input type="text" id="telefone" placeholder="Número do seu telefone" name="telefone" required>
+        <label for="email" class="email">Email:
+          <input type="email" id="email" placeholder="Digite o seu email" name="email" required>
         </label>
-        <label for="cmsg" class="mensagem">
-          <p>Mensagem:</p>
-          <textarea name="cmsg" id="cmsg" cols="30" rows="10" placeholder="Digite a sua mensagem" required></textarea>
+        <label for="mensagem" class="mensagem">Mensagem:
+          <textarea id="mensagem" cols="30" rows="10" placeholder="Digite a sua mensagem" name="mensagem" required></textarea>
         </label>
-        <button type="send" class="button"><img src="img/icon-send.svg" class="icon">Enviar</button>
+        <input type="text" name="leaveblank" style="display: none">
+        <input type="text" name="dontchange" style="display: none" value="http://">
+        <button type="submit" class="button"><img src="img/icon-send.svg" class="icon" alt="Enviar Mensagem">Enviar</button>
       </form>
-      <div class="dados-contato">
+      <div class="dados-contato" itemscope itemtype="http://schema.org/Organization">
         <h3 class="sub">Entre em <span>contato conosco</span> diretamente</h3>
         <ul>
           <li><img src="img/icon-whatsapp.svg" alt="ìcone whatsapp" class="icon whats">
             <a href="https://wa.me/5511993438640" class="button green" target="_blank">Chamar agora</a>
           </li>
-          <li><img src="img/icon-tel.svg" alt="Ícone Telefone Contato" class="icon">
-            <a href="tel:5511993438640">(11) 99343-8640</a>
+          <li><img src="img/icon-tel.svg" alt="Ícone Telefone Contato" class="icon" itemprop="image">
+            <a href="tel:+5511993438640" itemprop="telephone">(11) 99343-8640</a>
           </li>
           <li><img src="img/icon-mail.svg" alt="Ícone Email contato" class="icon">
             <a href="mailto:contato@wapy.com.br">contato@wapy.com.br</a>
@@ -104,23 +103,24 @@
       </div>
       <div class="social">
         <h3 class="sub">Redes Sociais</h3>
-        <a href="https://fb.com/wapy">
-          <img src="img/icon-facebook.svg" alt="Facebook Wapy" target="_blank">
+        <a href="https://fb.com/wapyoficial" target="_blank">
+          <img src="img/icon-facebook.svg" alt="Facebook Wapy">
         </a>
-        <a href="https://instagram.com/wapy">
-          <img src="img/icon-instagram.svg" alt="Instagram Wapy" target="_blank">
+        <a href="https://instagram.com/wapyoficial" target="_blank">
+          <img src="img/icon-instagram.svg" alt="Instagram Wapy">
         </a>
       </div>
     </div>
-    <footer class="footer">
-      
-      <p><img src="img/symbol.svg" alt="Símbolo" class="logo"><i></i></p>
+  </div>
+  <footer class="footer">
 
-      <p>Copyright &copy; 2020 - Todos os direitos reservados</p>
-    </footer>
-    <script src="js/easeljs-0.7.1.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/script.js"></script>
+    <p><img src="img/symbol.svg" alt="Símbolo" class="logo"></p>
+
+    <p>Copyright &copy; 2020 - Todos os direitos reservados</p>
+  </footer>
+  <script src="js/easeljs-0.7.1.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

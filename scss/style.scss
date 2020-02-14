@@ -26,6 +26,31 @@ $a3: #FF7F66;
 $a4: #FFC9BE;
 $a5: #FEE8E3;
 
+// Mixins
+@mixin itransform($prop) {
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -ms-transform: $prop;
+  -o-transform: $prop;
+  transform: $prop;
+}
+
+@mixin transition($prop) {
+  -webkit-transition: $prop;
+  -moz-transition: $prop;
+  -ms-transition: $prop;
+  -o-transition: $prop;
+  transition: $prop;
+}
+
+@mixin border-radius($prop) {
+  -webkit-border-radius: $prop;
+  -moz-border-radius: $prop;
+  -ms-border-radius: $prop;
+  -o-border-radius: $prop;
+  border-radius: $prop;
+}
+
 ul {
   list-style: none;
 }
@@ -68,6 +93,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .logo {
+    max-width: 130px;
+  }
   .menu {
     a {
       display: inline-block;
@@ -101,13 +129,18 @@ body {
 
 input, textarea {
   background: none;
-  border: 0.25rem solid $c4;
+  border: 0.21rem solid $c4;
   border-radius: 0.1875rem;
   color: $c4;
   padding: 5px 10px;
   font-family: arial;
   font-size: 16px;
   width: 380px;
+  display: inline-block;
+  &:focus {
+    outline: 0.21rem solid $a3 ;
+    outline-offset: -0.21rem;
+  }
 }
 input {
   height: 36px;
@@ -297,25 +330,11 @@ label p{
     }
   }
 }
-.logo {
-  max-width: 130px;
-}
 .footer {
   text-align: center;
-  .logo {
-    height: 60px;
-    width: 100%;
-  }
-  .logo ~ i {
-    &::after {
-      content: "wapy";
-      font-family: 'Nunito';
-      font-size: 16px;
-      font-weight: 900;
-      display: block;
-      color: $a3;
-      margin-bottom: 16px;
-    }
+  img {
+    height: 70px;
+    // max-width: 100%;
   }
   span {
     color: $a3;

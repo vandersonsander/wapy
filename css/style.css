@@ -53,6 +53,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.cabecalho .logo {
+  max-width: 130px;
+}
 .cabecalho .menu a {
   display: inline-block;
   margin-right: 16px;
@@ -83,13 +86,18 @@ body {
 
 input, textarea {
   background: none;
-  border: 0.25rem solid #E6E3E8;
+  border: 0.21rem solid #E6E3E8;
   border-radius: 0.1875rem;
   color: #E6E3E8;
   padding: 5px 10px;
   font-family: arial;
   font-size: 16px;
   width: 380px;
+  display: inline-block;
+}
+input:focus, textarea:focus {
+  outline: 0.21rem solid #FF7F66;
+  outline-offset: -0.21rem;
 }
 
 input {
@@ -281,25 +289,11 @@ label p {
   stroke: #FF7F66;
 }
 
-.logo {
-  max-width: 130px;
-}
-
 .footer {
   text-align: center;
 }
-.footer .logo {
-  height: 60px;
-  width: 100%;
-}
-.footer .logo ~ i::after {
-  content: "wapy";
-  font-family: "Nunito";
-  font-size: 16px;
-  font-weight: 900;
-  display: block;
-  color: #FF7F66;
-  margin-bottom: 16px;
+.footer img {
+  height: 70px;
 }
 .footer span {
   color: #FF7F66;
