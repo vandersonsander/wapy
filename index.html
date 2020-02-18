@@ -42,6 +42,7 @@
   <meta property="og:description" content="Criamos sites, artes para mídias sociais e físicas, logotipos e flyers animados">
   <meta property="og:url" content="https://wapy.com.br/">
   <meta property="og:image" content="https://wapy.com.br/og-image.png">
+  <meta name="theme-color" content="#381155">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shorcut icon" href="favicon.png">
   <link rel="icon" href="favicon.png">
@@ -50,42 +51,48 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <!-- <canvas id="bg-canvas"></canvas> -->
-  <div class="wrapper">
-    <header class="cabecalho">
 
-      <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
-      <nav>
-        <ul class="menu">
-          <li><a href="#sobre" data-action="#sobre">Sobre</a></li>
-          <li><a href="#promo" data-action="#promo">Preços</a></li>
-          <li><a href="#contato" data-action="#contato">Contato</a></li>
-        </ul>
-      </nav>
+  <header class="cabecalho wrapper">
 
-    </header>
+    <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
 
-    <div class="intro" data-slide="intro">
-      <div>
-        <h1 class="intro-title">Traga mais clientes para o seu negócio</h1>
-        <p class="intro-desc">Com um site <span>otimizado para o google</span> fica bem mais fácil de ser encontrado</p>
-      </div>
-      <div style="display: none">
-        <h1 class="intro-title">Conquiste clientes através das redes sociais</h1>
-        <p class="intro-desc">Criamos posts <span>incríveis</span> e <span>atrativos</span> para facebook e instagram</p>
-      </div>
-      <button class="button" data-action="#contato">Pedir Orçamento</button>
+    <nav class="menu-container">
+      <label for="enable" class="hamburger-menu">
+          <div class="burger"></div>
+          <input type="checkbox" id="enable" checked>
+        </label>
+      <ul class="menu">
+        <li><a href="#sobre" data-action="#sobre">Sobre</a></li>
+        <li><a href="#promo" data-action="#promo">Preços</a></li>
+        <li><a href="#contato" data-action="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="intro wrapper" data-slide="intro">
+    <div>
+      <h1 class="intro-title">Traga mais clientes para o seu negócio</h1>
+      <p class="intro-desc">Com um site <span>otimizado para o google</span> fica bem mais fácil de ser encontrado nas pesquisas</p>
     </div>
-
-    <h2>Aproveite nossas promoções. Entre em contato conosco.</h2>
-    <div id="promo" class="promo" itemscope itemtype="https://schema.org/Offer">
+    <div style="display: none">
+      <h1 class="intro-title">Conquiste clientes através das redes sociais</h1>
+      <p class="intro-desc">Criamos posts <span>incríveis</span> e <span>atrativos</span> para facebook e instagram</p>
+    </div>
+    <button class="button" data-action="#contato">Orçamento</button>
+  </div>
+  <div class="promo-wrapper" id="promo">
+    <h2 class="sub">Conheça nossas <span>promoções</span></h2>
+    <div class="promo" itemscope itemtype="https://schema.org/Offer">
       <div class="promo-1">
         <h3 itemprop="name">Site Profissional</h3>
         <ul>
           <li>Até 5 páginas</li>
           <li>Layout Personalizado</li>
+          <li>Editável</li>
+          <li>SEO</li>
           <li>Botão de Chat</li>
         </ul>
-        <p><span class="preco" itemprop="price">R$ 498,90</span></p>
+        <p><span class="preco" itemprop="price"><sub>R$</sub>498<sup>,90</sup></span></p>
       </div>
       <div class="promo-2">
         <h3 itemprop="name">Site Premium</h3>
@@ -96,9 +103,9 @@
           <li>SEO</li>
           <li>Layout Personalizado</li>
         </ul>
-        <p><span class="preco" itemprop="price">R$ 3398,90</span></p>
+        <p><span class="preco" itemprop="price"><sub>R$</sub>3.499<sup>,90</sup></span></p>
       </div>
-      <div class="promo-2">
+      <div class="promo-3">
         <h3 itemprop="name">Arte Digital</h3>
         <ul>
           <li>Post para redes sociais</li>
@@ -106,62 +113,69 @@
           <li>Arte para Cartões de Visita</li>
           <li>Flyers</li>
         </ul>
-        <p><span class="preco" itemprop="price">R$ 48,90</span></p>
+        <p><span class="preco" itemprop="price"><sub>R$</sub>48<sup>,90</sup></span></p>
       </div>
-      <div class="promo-3">
+      <div class="promo-4">
         <h3 itemprop="name">Flyer Animado</h3>
-        <p>Flyer animado até 15 segundos</p>
-        <p>Feito no formato para as redes sociais</p>
-        <p>Formato de GIF ou Vídeo</p>
-        <p><span class="preco" itemprop="price">R$ 99,90</span></p>
+        <ul>
+          <li>Flyer animado até 15 segundos</li>
+          <li>Feito no formato para as redes sociais</li>
+          <li>Formato de GIF ou Vídeo</li>
+        </ul>
+        <p><span class="preco" itemprop="price"><sub>R$</sub>99<sup>,90</sup></span></p>
       </div>
-      <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou <strong>depósito bancário</strong></p>
     </div>
+    <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou <strong>depósito bancário</strong></p>
+  </div class="promo-wrapper">
 
-    <h3 class="sub">Porfólio</h3>
-    <p>Conheça <strong>alguns</strong> de nossos trabalhos</p>
-    <div class="slide-wrapper">
-      <ul class="slide">
-        <li>
-          <h2>Site Profissional</h2>
-          <a href="https://woodsites.com.br/portfolio/bikcraft/" target="_blank">
-            <img src="img/portfolio-site-bikcraft.png" alt="Site Bikcraft">
-          </a>
-        </li>
-        <li>
-          <h2>Site Profissional</h2>
-          <img src="img/portfolio-site-lescone.png" alt="Site LeScone">
-        </li>
-        <li>
-          <h2>Flyer Animado</h2>
-          <img src="img/portfolio-arte-animada-upburger.gif" alt="Arte Animada UpBurger">
-        </li>
-        <li>
-          <h2>Logotipo</h2>
-          <img src="img/portfolio-logo-upburger.png" alt="Logotipo UpBurger">
-        </li>
-        <li>
-          <h2>Post Mídia Social</h2>
-          <img src="img/portfolio-post-upburger.png" alt="Post UpBurger">
-        </li>
-      </ul>
-    </div>
-    <div class="contato" id="contato">
+  <div class="slide-wrapper">
+    <h2 class="sub">Porfólio</h2>
+    <p>Conheça <span>alguns</span> de nossos trabalhos
+      <p>
+        <ul class="slide">
+          <li>
+            <h2>Site Profissional</h2>
+            <a href="https://woodsites.com.br/portfolio/bikcraft/" target="_blank">
+              <img src="img/portfolio-site-bikcraft.png" alt="Site Bikcraft">
+            </a>
+          </li>
+          <li>
+            <h2>Site Profissional</h2>
+            <img src="img/portfolio-site-lescone.png" alt="Site LeScone">
+          </li>
+          <li>
+            <h2>Flyer Animado</h2>
+            <img src="img/portfolio-arte-animada-upburger.gif" alt="Arte Animada UpBurger">
+          </li>
+          <li>
+            <h2>Logotipo</h2>
+            <img src="img/portfolio-logo-upburger.png" alt="Logotipo UpBurger">
+          </li>
+          <li>
+            <h2>Post Mídia Social</h2>
+            <img src="img/portfolio-post-upburger.png" alt="Post UpBurger">
+          </li>
+        </ul>
+  </div>
+  <div id="contato" class="wrapper">
+    <h2 class="sub">Contato</h2>
+    <div class="contato">
       <form action="enviar.php" class="form-contato" method="POST">
         <h3 class="sub">Envie uma <span>mensagem</span> para nós</h3>
         <label for="nome" class="nome">Nome:
-          <input type="text" id="nome" placeholder="Digite o seu nome" name="nome" required>
-        </label>
-        <label for="ddd" class="telefone">Telefone:
+            <input type="text" id="nome" placeholder="Digite o seu nome" name="nome" required>
+          </label>
+        <label for="ddd">Telefone:</label>
+        <div class="telefone">
           <input type="text" id="ddd" maxlength="3" placeholder="DDD" name="ddd" required>
-        </label>
-        <input type="text" id="telefone" placeholder="Número do seu telefone" name="telefone" required>
+          <input type="text" id="telefone" placeholder="Número do seu telefone" name="telefone" required>
+        </div>
         <label for="email" class="email">Email:
-          <input type="email" id="email" placeholder="Digite o seu email" name="email" required>
-        </label>
+            <input type="email" id="email" placeholder="Digite o seu email" name="email" required>
+          </label>
         <label for="mensagem" class="mensagem">Mensagem:
-          <textarea id="mensagem" cols="30" rows="10" placeholder="Digite a sua mensagem" name="mensagem" required></textarea>
-        </label>
+            <textarea id="mensagem" cols="30" rows="10" placeholder="Digite a sua mensagem" name="mensagem" required></textarea>
+          </label>
         <input type="text" name="leaveblank" style="display: none">
         <input type="text" name="dontchange" style="display: none" value="http://">
         <button type="submit" class="button"><img src="img/icon-send.svg" class="icon" alt="Enviar Mensagem">Enviar</button>
@@ -170,10 +184,10 @@
         <h3 class="sub">Entre em <span>contato conosco</span> diretamente</h3>
         <ul>
           <li><img src="img/icon-whatsapp.svg" alt="ìcone whatsapp" class="icon whats">
-            <a href="https://wa.me/5511993438640" class="button green" target="_blank">Chamar agora</a>
+            <a href="https://wa.me/5511945418250" class="button green" target="_blank">Chamar agora</a>
           </li>
           <li><img src="img/icon-tel.svg" alt="Ícone Telefone Contato" class="icon" itemprop="image">
-            <a href="tel:+5511993438640" itemprop="telephone">(11) 99343-8640</a>
+            <a href="tel:+5511945418250" itemprop="telephone">(11) 94541-8250</a>
           </li>
           <li><img src="img/icon-mail.svg" alt="Ícone Email contato" class="icon">
             <a href="mailto:contato@wapy.com.br">contato@wapy.com.br</a>
@@ -197,13 +211,10 @@
       </div>
     </div>
   </div>
-  </div>
   <footer class="footer">
-
     <p>
       <a href=""><img src="img/symbol.svg" alt="Símbolo" class="logo"></a>
     </p>
-
     <p>Copyright &copy; 2020 - Todos os direitos reservados</p>
   </footer>
   <div id="modal-bg">
