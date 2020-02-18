@@ -49,35 +49,102 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <canvas id="bg-canvas"></canvas>
+  <!-- <canvas id="bg-canvas"></canvas> -->
   <div class="wrapper">
-
     <header class="cabecalho">
+
       <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
-      <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="#sobre" data-action="#sobre">Sobre</a></li>
+          <li><a href="#promo" data-action="#promo">Preços</a></li>
+          <li><a href="#contato" data-action="#contato">Contato</a></li>
+        </ul>
       </nav>
+
     </header>
 
-    <div class="promo" itemscope itemtype="https://schema.org/Offer">
-      <h2>Aproveite nossas promoções. Entre em contato conosco.</h2>
+    <div class="intro" data-slide="intro">
+      <div>
+        <h1 class="intro-title">Traga mais clientes para o seu negócio</h1>
+        <p class="intro-desc">Com um site <span>otimizado para o google</span> fica bem mais fácil de ser encontrado</p>
+      </div>
+      <div style="display: none">
+        <h1 class="intro-title">Conquiste clientes através das redes sociais</h1>
+        <p class="intro-desc">Criamos posts <span>incríveis</span> e <span>atrativos</span> para facebook e instagram</p>
+      </div>
+      <button class="button" data-action="#contato">Pedir Orçamento</button>
+    </div>
+
+    <h2>Aproveite nossas promoções. Entre em contato conosco.</h2>
+    <div id="promo" class="promo" itemscope itemtype="https://schema.org/Offer">
       <div class="promo-1">
         <h3 itemprop="name">Site Profissional</h3>
-        <p>Até 5 páginas</p>
+        <ul>
+          <li>Até 5 páginas</li>
+          <li>Layout Personalizado</li>
+          <li>Botão de Chat</li>
+        </ul>
         <p><span class="preco" itemprop="price">R$ 498,90</span></p>
       </div>
       <div class="promo-2">
-        <h3 itemprop="name">Logotipo ou Post</h3>
-        <p>Post para redes sociais</p>
+        <h3 itemprop="name">Site Premium</h3>
+        <ul>
+          <li>Lojas Virtuais, Blogs ou Portais</li>
+          <li>Suporte por 3 meses</li>
+          <li>Editável</li>
+          <li>SEO</li>
+          <li>Layout Personalizado</li>
+        </ul>
+        <p><span class="preco" itemprop="price">R$ 3398,90</span></p>
+      </div>
+      <div class="promo-2">
+        <h3 itemprop="name">Arte Digital</h3>
+        <ul>
+          <li>Post para redes sociais</li>
+          <li>Logotipo</li>
+          <li>Arte para Cartões de Visita</li>
+          <li>Flyers</li>
+        </ul>
         <p><span class="preco" itemprop="price">R$ 48,90</span></p>
       </div>
       <div class="promo-3">
-        <h3 itemprop="name">Post Animado</h3>
-        <p>Até 15 segundos</p>
+        <h3 itemprop="name">Flyer Animado</h3>
+        <p>Flyer animado até 15 segundos</p>
+        <p>Feito no formato para as redes sociais</p>
+        <p>Formato de GIF ou Vídeo</p>
         <p><span class="preco" itemprop="price">R$ 99,90</span></p>
       </div>
       <p>Pagamento via <img src="img/mercado-pago.svg" alt=""> ou <strong>depósito bancário</strong></p>
+    </div>
+
+    <h3 class="sub">Porfólio</h3>
+    <p>Conheça <strong>alguns</strong> de nossos trabalhos</p>
+    <div class="slide-wrapper">
+      <ul class="slide">
+        <li>
+          <h2>Site Profissional</h2>
+          <a href="https://woodsites.com.br/portfolio/bikcraft/" target="_blank">
+            <img src="img/portfolio-site-bikcraft.png" alt="Site Bikcraft">
+          </a>
+        </li>
+        <li>
+          <h2>Site Profissional</h2>
+          <img src="img/portfolio-site-lescone.png" alt="Site LeScone">
+        </li>
+        <li>
+          <h2>Flyer Animado</h2>
+          <img src="img/portfolio-arte-animada-upburger.gif" alt="Arte Animada UpBurger">
+        </li>
+        <li>
+          <h2>Logotipo</h2>
+          <img src="img/portfolio-logo-upburger.png" alt="Logotipo UpBurger">
+        </li>
+        <li>
+          <h2>Post Mídia Social</h2>
+          <img src="img/portfolio-post-upburger.png" alt="Post UpBurger">
+        </li>
+      </ul>
     </div>
     <div class="contato" id="contato">
       <form action="enviar.php" class="form-contato" method="POST">
@@ -116,7 +183,7 @@
       <div class="sobre" id="sobre">
         <h3 class="sub">Sobre a <span>wapy</span></h3>
         <p>Agência Digital <strong>especializada</strong> em criação de sites e conteúdo digital.</p>
-        <p>Atendimento <strong>online</strong>: Segunda à Sexta, das <strong>8:30</strong> às <strong>19:00hrs</strong></p>
+        <p>Atendimento <strong>online</strong> ou por <strong>telefone</strong>: Segunda à Sexta, das <strong>9:00</strong> às <strong>19:00hrs</strong></p>
         <p>Endereço: Rua Osaka, 1204 - São Paulo - SP - CNPJ: 33.200.328/0001-00</p>
       </div>
       <div class="social">
@@ -130,14 +197,26 @@
       </div>
     </div>
   </div>
+  </div>
   <footer class="footer">
 
-    <p><img src="img/symbol.svg" alt="Símbolo" class="logo"></p>
+    <p>
+      <a href=""><img src="img/symbol.svg" alt="Símbolo" class="logo"></a>
+    </p>
 
     <p>Copyright &copy; 2020 - Todos os direitos reservados</p>
   </footer>
-  <script src="js/easeljs-0.7.1.min.js"></script>
-  <script src="js/TweenMax.min.js"></script>
+  <div id="modal-bg">
+    <div id="modal-img">
+      <div class="close-button">
+        <div></div>
+        <div></div>
+      </div>
+      <img src="img/portfolio-site-bikcraft.png" alt="">
+    </div>
+  </div>
+  <script src="js/debounce.js"></script>
+  <script src="js/slide.js"></script>
   <script src="js/script.js"></script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H8K3B7"

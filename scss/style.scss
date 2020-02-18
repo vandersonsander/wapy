@@ -26,31 +26,6 @@ $a3: #FF7F66;
 $a4: #FFC9BE;
 $a5: #FEE8E3;
 
-// Mixins
-@mixin itransform($prop) {
-  -webkit-transform: $prop;
-  -moz-transform: $prop;
-  -ms-transform: $prop;
-  -o-transform: $prop;
-  transform: $prop;
-}
-
-@mixin transition($prop) {
-  -webkit-transition: $prop;
-  -moz-transition: $prop;
-  -ms-transition: $prop;
-  -o-transition: $prop;
-  transition: $prop;
-}
-
-@mixin border-radius($prop) {
-  -webkit-border-radius: $prop;
-  -moz-border-radius: $prop;
-  -ms-border-radius: $prop;
-  -o-border-radius: $prop;
-  border-radius: $prop;
-}
-
 ul {
   list-style: none;
 }
@@ -73,60 +48,97 @@ p {
   height: 100vh;
 }
 
-.wrapper {
-  width: 940px;
-  padding: 30px 80px;
-  background: rgba(10,10,10,.4);
-  margin: 10px auto 30px;
-  border-radius: 1.25rem;
-}
-
 body {
-  background: $l1;
+  background: $l3;
   font-family: 'Roboto';
   font-weight: 300;
   color: $c4;
   font-size: 1rem;
+  background: linear-gradient(-45deg, $l3, 50%, black, 50%, $l1) no-repeat;
+  background-size: 100% 200vh;
+  background-attachment: fixed;
+	// animation: gradient 5s ease infinite;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .cabecalho {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 16px 0;
   .logo {
-    max-width: 130px;
+    max-width: 150px;
   }
   .menu {
+    display: flex;
     a {
       display: inline-block;
       margin-right: 16px;
       text-transform: uppercase;
       letter-spacing: .05em;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 1rem;
+      padding: 16px;
+      margin: 0 4px;
       &::after {
         content: '';
         width: 0;
-        height: 3px;
+        height: 2px;
         background: $c4;
-        margin: 8px auto;
         border-radius: 3px;
         display: block;
+        margin: 4px auto;
         transition: .3s ease-in;
       }
       &:hover::after {
         width: 100%;
       }
-      &:first-child {
+    }
+    li {
+      &:last-child a {
         color: $a3;
+        font-weight: 500;
       }
-      &:first-child::after {
+      &:last-child a::after {
         background-color: $a3;
       }
     }
   }
 }
 
+// Button
+.button {
+  font-weight: 500!important;
+  outline: none;
+}
+
+//Intro
+.intro {
+  div {
+    margin: 68px auto;
+    text-align: center;
+    h1 {
+      font-size: 68px;
+      margin-bottom: 26px;
+    }
+    p {
+      font-size: 26px;
+    }
+    p span {
+      color: $a3
+    }
+  }
+  button {
+    margin: auto;
+  }
+}
+
+
+//Formulário
 input, textarea {
   background: none;
   border: 0.21rem solid $c4;
@@ -332,6 +344,10 @@ label p{
 }
 .footer {
   text-align: center;
+  margin: 26px;
+  p {
+    margin: 0;
+  }
   img {
     height: 70px;
     // max-width: 100%;
@@ -362,6 +378,171 @@ label p{
   }
 }
 
+// Slide
+.slide-wrapper {
+  overflow: hidden;
+  user-select: none;
+  will-change: transform;
+  max-width: 100%;
+}
+.slide {
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 16px;
+    color: $l2;
+    &::after {
+      // content: "";
+      display: block;
+      height: 3px;
+      width: 30px;
+      border-radius: 3px;
+      margin: 13px auto 16px;
+      background: $c4;
+    }
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background: $c4;
+    max-width: 300px;
+    margin: 0 16px;
+    padding: 26px;
+    border-radius: 1.25rem;
+    transform: scale(0.8);
+    transition: all .3s;
+    opacity: .6;
+    box-shadow: 0 5px 5px rgba(0,0,0,.3), 0 5px 5px rgba(0,0,0,.3);
+    // box-shadow: 0 5px 10px 5px rgba(0,0,0,.4);
+  }
+  img {
+    cursor: pointer;
+  }
+  li.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.custom-controls {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  li {
+    width: 15px;
+    height: 15px;
+    background: $l5;
+    opacity: .5;
+    border-radius: 50%;
+    margin: 8px;
+    cursor: pointer;
+    &.active {
+      opacity: 1;
+      background: $a3;
+    }
+  }
+}
+#modal-bg {
+  background: rgba(0,0,0,0.5);
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  z-index: 100000;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  // display: none;
+  #modal-img {
+    height: 90vh;
+    margin: 5vh auto 0;
+    display: block;
+    width: 90vh;
+    background: $c4;
+    opacity: 1;
+    padding: 26px;
+    border-radius: 10px;
+    position: relative;
+    animation: bounce 1s linear forwards;
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      opacity: 1;
+    }
+    
+  }
+  .close-button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $c2;
+    cursor: pointer;
+    div {
+      width: 20px;
+      border-radius: 5px;
+      background: $c4;
+      height: 3px;
+      // margin: auto;
+      position: absolute;
+      top: calc(50% - 1.5px);
+      left: calc(50% - 10px);
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Animações
+@keyframes bounce {
+  from {
+    transform: scale(.5);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  70%{
+    transform: scale(.9);
+  }
+  85% {
+    transform: scale(1.1);
+  }
+  93% {
+    transform: scale(.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  from {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(0);
+    display: none;
+  }
+}
 @keyframes button {
   from {
     transform: scale(1);
