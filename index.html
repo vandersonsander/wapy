@@ -21,7 +21,9 @@
     })(window, document, 'script', 'dataLayer', 'GTM-5H8K3B7');
   </script>
   <!-- End Google Tag Manager -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158392127-1"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -34,7 +36,7 @@
   </script>
 
   <meta charset="UTF-8">
-  <title>Wapy Agência Digital - Site Profissional Por menos de R$ 500,00</title>
+  <title>Wapy Agência Digital - Criamos seu Site Profissional por R$ 498,90 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="Description" content="Criamos sites, artes para mídias sociais e físicas, logotipos e flyers animados">
   <meta property="og:type" content="website">
@@ -43,6 +45,8 @@
   <meta property="og:url" content="https://wapy.com.br/">
   <meta property="og:image" content="https://wapy.com.br/og-image.png">
   <meta name="theme-color" content="#381155">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shorcut icon" href="favicon.png">
   <link rel="icon" href="favicon.png">
@@ -57,10 +61,11 @@
     <a href="./"><img src="img/logo.svg" alt="Logotipo Wapy" class="logo"></a>
 
     <nav class="menu-container">
-      <label for="enable" class="hamburger-menu">
-          <div class="burger"></div>
-          <input type="checkbox" id="enable" checked>
-        </label>
+      <input type="checkbox" id="enable">
+      <!-- <div class="hamburger-menu" onclick="()=>document.querySelector('#enable')"> -->
+      <div class="hamburger-menu" onclick="document.querySelector('#enable').click()">
+        <div class="burger"></div>
+      </div>
       <ul class="menu">
         <li><a href="#sobre" data-action="#sobre">Sobre</a></li>
         <li><a href="#promo" data-action="#promo">Preços</a></li>
@@ -70,13 +75,17 @@
   </header>
 
   <div class="intro wrapper" data-slide="intro">
-    <div>
-      <h1 class="intro-title">Traga mais clientes para o seu negócio</h1>
+    <div class="active">
+      <h1 class="intro-title">Atraia mais clientes para o seu negócio</h1>
       <p class="intro-desc">Com um site <span>otimizado para o google</span> fica bem mais fácil de ser encontrado nas pesquisas</p>
     </div>
-    <div style="display: none">
+    <div>
       <h1 class="intro-title">Conquiste clientes através das redes sociais</h1>
       <p class="intro-desc">Criamos posts <span>incríveis</span> e <span>atrativos</span> para facebook e instagram</p>
+    </div>
+    <div>
+      <h1 class="intro-title">Site Profissional para qualquer dispositivo</h1>
+      <p class="intro-desc">Seu site vai funcionar bem em <span>desktops</span>, <span>notebooks</span>, <span>tablets</span> e <span>celulares</span></p>
     </div>
     <button class="button" data-action="#contato">Orçamento</button>
   </div>
@@ -86,24 +95,30 @@
       <div class="promo-1">
         <h3 itemprop="name">Site Profissional</h3>
         <ul>
-          <li>Até 5 páginas</li>
           <li>Layout Personalizado</li>
+          <li>Até 5 páginas</li>
+          <li>Responsivo</li>
           <li>Editável</li>
           <li>SEO</li>
           <li>Botão de Chat</li>
         </ul>
         <p><span class="preco" itemprop="price"><sub>R$</sub>498<sup>,90</sup></span></p>
+        <p class="parcelamento"><span>até 2X SEM JUROS</span></p>
+        <button class="button">quero este</button>
       </div>
-      <div class="promo-2">
+      <div class="promo-2 recomendado">
         <h3 itemprop="name">Site Premium</h3>
         <ul>
+          <li>Todos os recursos do Site Prossional</li>
           <li>Lojas Virtuais, Blogs ou Portais</li>
+          <li>SEO Avançado</li>
+          <li>Consultoria online para anúncios online</li>
+          <li>Botão de Chat</li>
           <li>Suporte por 3 meses</li>
-          <li>Editável</li>
-          <li>SEO</li>
-          <li>Layout Personalizado</li>
         </ul>
         <p><span class="preco" itemprop="price"><sub>R$</sub>3.499<sup>,90</sup></span></p>
+        <p class="parcelamento">até 6X SEM JUROS</p>
+        <button class="button">quero este</button>
       </div>
       <div class="promo-3">
         <h3 itemprop="name">Arte Digital</h3>
@@ -114,6 +129,7 @@
           <li>Flyers</li>
         </ul>
         <p><span class="preco" itemprop="price"><sub>R$</sub>48<sup>,90</sup></span></p>
+        <button class="button">quero este</button>
       </div>
       <div class="promo-4">
         <h3 itemprop="name">Flyer Animado</h3>
@@ -123,44 +139,45 @@
           <li>Formato de GIF ou Vídeo</li>
         </ul>
         <p><span class="preco" itemprop="price"><sub>R$</sub>99<sup>,90</sup></span></p>
+        <p class="parcelamento">até 2X SEM JUROS</p>
+        <button class="button">quero este</button>
       </div>
     </div>
     <p>Pagamento via <strong>mercado pago</strong> ou <strong>depósito bancário</strong><br><img src="img/mercado-pago.svg" alt="Ícone Mercado Pago"></p>
-    
-  </div class="promo-wrapper">
+  </div>
 
   <div class="slide-wrapper">
     <h2 class="sub">Porfólio</h2>
-    <p>Conheça <span>alguns</span> de nossos trabalhos<p>
-        <ul class="slide">
-          <li>
-            <h2>Site Profissional</h2>
-            <a href="https://woodsites.com.br/portfolio/bikcraft/" target="_blank">
-              <img src="img/portfolio-site-bikcraft.png" alt="Site Bikcraft">
-            </a>
-          </li>
-          <li>
-            <h2>Site Profissional</h2>
-            <img src="img/portfolio-site-lescone.png" alt="Site LeScone">
-          </li>
-          <li>
-            <h2>Flyer Animado</h2>
-            <img src="img/portfolio-arte-animada-upburger.gif" alt="Arte Animada UpBurger">
-          </li>
-          <li>
-            <h2>Logotipo</h2>
-            <img src="img/portfolio-logo-upburger.png" alt="Logotipo UpBurger">
-          </li>
-          <li>
-            <h2>Post Mídia Social</h2>
-            <img src="img/portfolio-post-upburger.png" alt="Post UpBurger">
-          </li>
-        </ul>
+    <p>Conheça <span>alguns</span> de nossos trabalhos</p>
+    <ul class="slide">
+      <li>
+        <h2>Site Profissional</h2>
+        <a href="https://woodsites.com.br/portfolio/bikcraft/" target="_blank">
+          <img src="img/portfolio-site-bikcraft.png" alt="Site Bikcraft">
+        </a>
+      </li>
+      <li>
+        <h2>Site Profissional</h2>
+        <img src="img/portfolio-site-lescone.png" alt="Site LeScone">
+      </li>
+      <li>
+        <h2>Flyer Animado</h2>
+        <img src="img/portfolio-arte-animada-upburger.gif" alt="Arte Animada UpBurger">
+      </li>
+      <li>
+        <h2>Logotipo</h2>
+        <img src="img/portfolio-logo-upburger.png" alt="Logotipo UpBurger">
+      </li>
+      <li>
+        <h2>Post Mídia Social</h2>
+        <img src="img/portfolio-post-upburger.png" alt="Post UpBurger">
+      </li>
+    </ul>
   </div>
   <div id="contato" class="wrapper">
     <h2 class="sub">Contato</h2>
     <div class="contato">
-      <form action="enviar.php" class="form-contato" method="POST">
+      <form action="enviar.php" class="form-contato formphp" method="POST">
         <h3 class="sub">Envie uma <span>mensagem</span> para nós</h3>
         <label for="nome" class="nome">Nome:
             <input type="text" id="nome" placeholder="Digite o seu nome" name="nome" required>
@@ -178,7 +195,7 @@
           </label>
         <input type="text" name="leaveblank" style="display: none">
         <input type="text" name="dontchange" style="display: none" value="http://">
-        <button type="submit" class="button"><img src="img/icon-send.svg" class="icon" alt="Enviar Mensagem">Enviar</button>
+        <button class="button"><img src="img/icon-send.svg" class="icon" alt="Enviar Mensagem" id="enviar">Enviar</button>
       </form>
       <div class="dados-contato" itemscope itemtype="http://schema.org/Organization">
         <h3 class="sub">Entre em <span>contato conosco</span> diretamente</h3>
@@ -203,10 +220,11 @@
       <div class="social">
         <h3 class="sub">Redes Sociais</h3>
         <a href="https://fb.com/wapyoficial" target="_blank">
-          <img src="img/icon-facebook.svg" alt="Facebook Wapy">
+          <!-- <img src="img/icon-facebook.svg" alt="Facebook Wapy"> -->
+          <svg class="icon-facebook" width="61" height="61" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M59.5 30.5c0 16.016-12.984 29-29 29s-29-12.984-29-29 12.984-29 29-29 29 12.984 29 29z" stroke="#F5F4F6" stroke-width="3"/><path d="M38.168 31.694h-5.443v19.938H24.48V31.694h-3.922v-7.007h3.922v-4.535c0-3.242 1.54-8.32 8.319-8.32l6.108.026v6.802h-4.432c-.727 0-1.75.363-1.75 1.91v4.123h6.163l-.72 7.001z" stroke="#F5F4F6" stroke-width="3" stroke-linejoin="round"/></svg>
         </a>
         <a href="https://instagram.com/wapyoficial" target="_blank">
-          <img src="img/icon-instagram.svg" alt="Instagram Wapy">
+          <svg class="icon-instagram" width="61" height="61" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="30.5" cy="30.5" r="29" stroke="#F5F4F6" stroke-width="3"/><path d="M30.502 12c-5.025 0-5.655.022-7.628.112-1.97.09-3.314.402-4.49.86a9.06 9.06 0 00-3.278 2.133 9.081 9.081 0 00-2.135 3.276c-.459 1.177-.771 2.522-.86 4.49C12.023 24.845 12 25.476 12 30.5c0 5.024.022 5.653.112 7.626.09 1.97.402 3.314.86 4.49a9.065 9.065 0 002.133 3.278 9.06 9.06 0 003.276 2.135c1.177.457 2.522.769 4.49.86 1.974.089 2.605.111 7.628.111 5.025 0 5.654-.022 7.627-.112 1.97-.09 3.316-.402 4.493-.86a9.052 9.052 0 003.275-2.134 9.08 9.08 0 002.135-3.277c.454-1.177.767-2.522.86-4.49.088-1.974.111-2.603.111-7.627 0-5.024-.023-5.655-.112-7.628-.092-1.97-.404-3.314-.86-4.49a9.079 9.079 0 00-2.134-3.278 9.041 9.041 0 00-3.277-2.133c-1.179-.457-2.524-.769-4.494-.86-1.973-.089-2.601-.111-7.627-.111h.006zm-1.66 3.334h1.66c4.94 0 5.525.018 7.475.106 1.804.083 2.783.384 3.435.637a5.72 5.72 0 012.126 1.384 5.741 5.741 0 011.385 2.128c.253.65.555 1.63.637 3.434.088 1.95.108 2.536.108 7.473 0 4.937-.02 5.523-.108 7.473-.083 1.804-.384 2.783-.637 3.434a5.72 5.72 0 01-1.385 2.125 5.721 5.721 0 01-2.126 1.384c-.651.254-1.63.555-3.435.637-1.95.089-2.536.108-7.475.108-4.94 0-5.526-.019-7.476-.108-1.804-.083-2.783-.384-3.435-.638a5.73 5.73 0 01-2.128-1.383A5.734 5.734 0 0116.08 41.4c-.253-.65-.555-1.63-.637-3.434-.089-1.95-.107-2.536-.107-7.476 0-4.94.018-5.523.107-7.473.082-1.804.384-2.783.637-3.435a5.731 5.731 0 011.384-2.127 5.74 5.74 0 012.128-1.385c.652-.254 1.631-.555 3.435-.638 1.707-.077 2.368-.1 5.816-.104v.005zm11.535 3.072a2.22 2.22 0 100 4.44 2.22 2.22 0 000-4.441zM30.502 21a9.5 9.5 0 00-9.5 9.5c0 5.247 4.253 9.499 9.5 9.499S40 35.747 40 30.5a9.5 9.5 0 00-9.5-9.5zm0 3.333a6.167 6.167 0 110 12.334 6.167 6.167 0 010-12.334z" fill="#F5F4F6"/></svg>
         </a>
       </div>
     </div>
@@ -228,6 +246,7 @@
   </div>
   <script src="js/debounce.js"></script>
   <script src="js/slide.js"></script>
+  <script src="js/simple-form.js"></script>
   <script src="js/script.js"></script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H8K3B7"
